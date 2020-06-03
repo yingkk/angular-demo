@@ -1,0 +1,27 @@
+<p>todo works!</p>
+<div class="todo">
+    <div class="query">
+        <div class="input">
+            <input type="text" [(ngModel)] = "keywords" (keydown) = "addTodoHandler($event)"/>
+        </div>
+    </div>
+    <div class="list">
+        <p>代办</p>
+        <div class="list-item" *ngFor="let item of historyList; let key = index" >
+           <p *ngIf="!item.status">
+              <input type="checkbox"  [(ngModel)] = "item.status" (change) = "checkboxChangeHandler()"/>
+               {{ item.keywords }}
+           </p>
+        </div>
+    </div>
+    <div class="list">
+        <p>办结</p>
+        <div class="list-item" *ngFor="let item of historyList; let key = index">
+           <p *ngIf="item.status">
+               {{ item.keywords }}
+               <span (click) = "deleteKeywordsHandler(key)">X</span>
+            </p> 
+        </div>
+       
+    </div>
+</div>

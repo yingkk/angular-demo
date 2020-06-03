@@ -1,0 +1,11 @@
+<p>transition works!</p>
+
+
+<div class="transition">
+    <div class="content">
+       <button (click) = "asideHandler()">点击显示/隐藏侧边栏</button>
+ </div>
+    <div class="aside" [ngClass] ="{'show': isShowAside, 'hidden': !isShowAside}" >
+      this is aside
+    </div>
+</div>

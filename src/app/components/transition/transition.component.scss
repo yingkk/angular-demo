@@ -1,0 +1,22 @@
+.transition {
+    display: flex;
+    justify-content: flex-start;
+  .aside {
+      width: 280px;
+      height: 600px;
+      background-color: #000;
+      color: #fff;
+      transform: translate(280px, 0);
+      transition: all 2s;
+  }
+  .show {
+      transform: translate(0,0);
+  }
+  .hidden {
+      transform: translate(280px,0);
+  }
+  .content {
+      width: 100%;
+      height: 600px;
+  }
+}

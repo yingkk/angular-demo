@@ -1,0 +1,59 @@
+<hr> 
+    <button (click) = "sendParent()">通过@Output给父组件广播数据</button>
+   
+   
+<hr>
+<br>
+<br>
+<br>
+   <div class="form">
+        <div class="title">
+           用户注册
+        </div>
+         <div class="item">
+            <div class="label">姓名</div>
+            <div class="content input">
+                <input type="text" [(ngModel)] = "formData.userName"/>
+            </div>
+         </div>
+         <div class="item">
+             <div class="label">性别</div>
+             <div class="content"> 
+                 <input type="radio" [(ngModel)] = "formData.sex" value = "male"/> 男
+                 <input type="radio" [(ngModel)] = "formData.sex" value = "female"/> 女
+             </div>
+         </div>
+         <div class="item">
+             <div class="label">居住城市</div>
+             <div class="content">
+                <select [(ngModel)] = "formData.city">
+                    <option  name="city"  value="">请选择</option>
+                    <option  name="city"  [value]="item.code" *ngFor="let item of cityList">{{item.name}}</option>
+                </select>
+             </div>
+         </div>
+         <div class="item">
+             <div class="label">爱好</div>
+             <div class="content">
+                 <span *ngFor="let item of formData.hobbies">
+                    <input [(ngModel)] = "item.checked" type="checkbox" [value]="item.code" />{{item.name}}
+                 </span>
+             </div>
+         </div>
+         <div class="item">
+             <div class="label">特殊备注</div>
+             <div class="content">
+                <textarea  cols="28" rows="3" [(ngModel)] = "formData.remark">
+     
+                </textarea>
+             </div>
+            
+         </div>
+         <div class="item btn">
+            <button>提交</button>
+         </div>
+         <pre>
+             {{ formData | json}}
+         </pre>
+     </div>
+

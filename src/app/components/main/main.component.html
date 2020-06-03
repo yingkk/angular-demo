@@ -1,0 +1,125 @@
+<p>main works!</p>
+
+
+
+
+<app-todo></app-todo>
+<br>
+<br>
+
+<app-search #appSearch></app-search>
+<br>
+<br>
+
+<app-form (outer) = "run($event)"></app-form>
+<br>
+<br>
+
+
+
+
+<p>父组件调用子组件的方法</p>
+<button (click) = "getChildComponentRun()">点击执行子组件run方法</button>
+
+
+
+<h3>{{ msg }}</h3>
+
+<h4>1.(动态)数据绑定</h4>
+<div>
+    <p>{{ title }}</p>
+    <img [src] ="picUrl" alt = "logo">
+</div>
+
+<h4>2.html绑定</h4>
+<div [innerHTML] = "content"></div>
+
+<h4>3.数据计算</h4>
+   {{ 20+2 }}
+
+<h4>4.数组遍历*ngFor</h4>
+<ul>
+    <li *ngFor="let item of userInfos; let key = index">
+      {{key}} - {{item.userName}} - {{item.age}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let item of itemList">
+        {{ item.type }}
+        <ol>
+            <li *ngFor="let cur of item.items">
+                {{ cur.name }} -{{ cur.age }}
+            </li>
+        </ol>
+    </li>
+</ul>
+
+<h4>5.条件判断 *ngIf *ngSwitch</h4>
+<div *ngIf="flag">
+   aaaa
+</div>
+<div *ngIf="!flag">
+   bbbb
+</div>
+
+<div>
+    <span [ngSwitch]="orderStatus">
+    <p *ngSwitchCase = "1">
+         待支付
+    </p>
+    <p *ngSwitchCase = "2">
+        部分支付
+    </p>
+    <p *ngSwitchCase = "3">
+        已支付
+    </p>
+    <p *ngSwitchCase = "4">
+        支付失败
+    </p>
+    <p *ngSwitchDefault>
+        异常
+    </p>
+    </span>
+</div>
+
+
+<h4>6.条件判断 [ngClass] [ngStyle]</h4>
+<div [ngClass] = "{'demo-red': flag, 'demo-blue': !flag}">
+     ngclass
+</div>
+<div [ngStyle]= "{'color':'blue'}">
+    ngClass
+</div>
+
+<ul>
+    <li *ngFor="let item of userInfos; let key = index;" [ngClass] = "{'demo-red': key == 0,'demo-blue': key == 1}">
+     {{item.userName}} - {{ item.age }}
+    </li>
+</ul>
+
+<h4>7.管道 date uppercase  lowercase </h4>
+
+<p>{{ currentDate | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+<p>{{ title | uppercase }}</p>
+<p>{{ title | lowercase }}</p>
+
+<!-- <p> {{ 1.25678 | number:'1,2~3'}}</p> -->
+
+<h4>8.表单事件 事件对象</h4>
+<input type="text" (keydown) = "keyDownHandler($event)">
+
+
+
+
+<h4>9.事件 </h4>
+<button (click)= "clickHandler()">点击</button>
+<button (click) = "getDataHandler()">点击获取数据</button>
+<button (click) = "setDataHandler()">点击修改数据</button>
+
+<h4>10.双向数据绑定-针对表单 </h4>
+
+<input type="text" [(ngModel)] = "inputValue"> {{ inputValue }}
+
+<button (click) = "changeValueHandler()">改变inputValue</button>
+<button (click) = "getValueHandler()">获取inputValue</button>

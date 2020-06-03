@@ -1,0 +1,34 @@
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .query {
+        width: 400px;
+        height: 56px;
+        display: flex;
+        justify-content: space-between;
+        .input input {
+            width: 260px;
+            height: 38px;
+        }
+        .btn button {
+            width: 90px;
+            height: 38px;
+        }
+    }
+    .list {
+        width: 400px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
+        border-top: 1px solid #a8a8a8;
+        .list-item {
+            margin-right: 20px;
+            height: 20px;
+            padding-right: 20px;
+            border: 1px solid #a8a8a8;
+           
+        }
+    }
+}
