@@ -1,0 +1,9 @@
+<p>news works!</p>
+<div class="news">
+    <div class="news-item" *ngFor="let item of newsList">
+        <!--get 传值-->
+        <!-- <a routerLink="/newsdetail" [queryParams]= "{'id': item.id}" routerLinkActive="active">{{ item.title }}</a> -->
+        <!--动态路由-->
+        <a [routerLink]= "['/newsdetail', item.id]" routerLinkActive="active">{{ item.title }}</a>
+    </div>
+</div>

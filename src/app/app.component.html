@@ -1,9 +1,33 @@
+<h4>router相关 我是根组件</h4>
+<header class="header">
+    <div class="h-item">
+        <!--routerLinkActive: 选中样式--> 
+        <a routerLink="/index" routerLinkActive="active">首页</a>
+    </div>
+    <div class="h-item">
+        <a routerLink="/news"  routerLinkActive="active">新闻</a>
+    </div>
+    <div class="h-item">
+        <a routerLink="/goods" routerLinkActive="active">商品</a>
+    </div>
+</header>
 
+<!--显示动态加载的路由 -->
+<router-outlet></router-outlet>  
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
 <app-home></app-home>
+<br>
+<br>
+<br>
+<br>
+<app-request></app-request>
 
-
-
-<!-- <app-header></app-header> -->
 <br>
 <br>
 <br>

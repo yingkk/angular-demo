@@ -1,0 +1,19 @@
+<p>request works!</p>
+
+<br>
+<br>
+<button (click) = "getData()">get获取数据</button>
+<hr>
+<br>
+<ul>
+    <li *ngFor="let item of list">{{ item.title }}</li>
+</ul>
+
+<br>
+<br>
+<button (click) = "login()">post提交数据</button>
+<br>
+<button (click) = "getJsonpData()">jsonp--跨域</button>
+<br>
+<br>
+<button (click) = "getAxiosData()">axios获取数据</button>

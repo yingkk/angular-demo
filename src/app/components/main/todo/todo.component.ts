@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 // 引入服务
-import { StorageService } from "../../../services/storage.service";
+import { StorageService } from "../../../services/storage/storage.service";
 
 @Component({
   selector: 'app-todo',

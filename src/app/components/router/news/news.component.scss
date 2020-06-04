@@ -1,0 +1,12 @@
+.news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .news-item {
+        width: 100px;
+        height: 48px;
+       .active {
+           color: red;
+       } 
+    }
+}

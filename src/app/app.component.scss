@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    .h-item {
+        width: 56px;
+        padding-left: 40px;
+        .active {
+            color: red;
+        }
+    }
+}
