@@ -23,9 +23,18 @@ import { GoodsComponent } from "./components/router/goods/goods.component";
 import { NewsdetailComponent } from './components/router/newsdetail/newsdetail.component';
 import { GoodsdetailComponent } from './components/router/goodsdetail/goodsdetail.component';
 
+import { MaleComponent } from './components/router/male/male.component';
+import { FemaleComponent } from './components/router/female/female.component';
+import { WelcomeComponent } from './components/router/female/welcome/welcome.component';
+import { SettingComponent } from './components/router/female/setting/setting.component';
+import { DescComponent } from './components/router/male/desc/desc.component';
+import { ListComponent } from './components/router/male/list/list.component';
+
 import { StorageService } from "./services/storage/storage.service";
 import { AsyncService } from "./services/async/async.service";
 import { AxiosService } from "./services/axios/axios.service";
+
+
 
 
 
@@ -47,7 +56,13 @@ import { AxiosService } from "./services/axios/axios.service";
     NewsComponent,
     GoodsComponent,
     NewsdetailComponent,
-    GoodsdetailComponent
+    GoodsdetailComponent,
+    MaleComponent,
+    FemaleComponent,
+    WelcomeComponent,
+    SettingComponent,
+    DescComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

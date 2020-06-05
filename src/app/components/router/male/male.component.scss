@@ -1,0 +1,20 @@
+    .content {
+        display: flex;
+        width: 100%;
+        height: 500px;
+        flex-direction: row;
+        .left {
+            width: 280px;
+            height: 100%;
+            background-color: #eee;
+            .link {
+                width: 80px;
+                height: 48px;
+                padding-left: 30px;
+            }
+        }
+        .right {
+            width: 100%;
+            height: 100%;
+        }
+    }

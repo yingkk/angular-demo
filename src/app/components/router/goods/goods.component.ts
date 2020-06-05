@@ -23,7 +23,7 @@ export class GoodsComponent implements OnInit {
     // this.router.navigate(["/goodsdetail"], navigationExtras);
 
 
-    // 也可以不引入NavigationExtras， 但需要保证参数结构。
+    // 也可以不引入NavigationExtras， 但需要保证参数结构对象里有queryParams属性。
     const query = {
       queryParams: { "id": 1}
     };
