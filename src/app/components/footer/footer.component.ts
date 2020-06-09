@@ -13,6 +13,8 @@ export class FooterComponent implements OnInit {
 
   constructor(public asyncService: AsyncService) { }
 
+  footerName: string = "我是footer";
+
   ngOnInit() {
     // 1._callBack异步
     this.asyncService.getDataWithCallback((data) => {
@@ -61,15 +63,8 @@ export class FooterComponent implements OnInit {
     //   console.log(data);
     // });
 
-
-
-
-
-
-
-
-
-
-
+  }
+  run() {
+    console.log("我是footer里的run方法");
   }
 }
