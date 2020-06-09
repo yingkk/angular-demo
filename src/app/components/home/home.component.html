@@ -8,4 +8,10 @@
 <br>
 <br>
 
-<app-header [pageName] = "pageName" [run] = "run"  [home]="this"></app-header>
+<app-header [pageName] = "pageName" [run] = "run"  [home]="this" ></app-header>
+
+<br>
+<br>
+<br>
+<button (click)="timer.childMethod()">父组件通过本地变量获取子组件方法</button>
+<app-header #timer></app-header>

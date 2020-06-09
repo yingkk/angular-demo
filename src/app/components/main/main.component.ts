@@ -35,65 +35,65 @@ export class MainComponent implements OnInit {
         age: 40
       }
     ],
-    this.itemList = [
-      {
-        type: "student",
-        items: [
-          {
-            name: "张三",
-           age: 20
-          },
-          {
-            name: "李四",
-            age: 21
-          }
-        ]
-       },
-       {
-        type: "teacher",
-        items: [
-          {
-            name: "王老师",
-           age: 40
-          },
-          {
-            name: "李老师",
-           age: 41
-          }
-        ]
-       }
-    ];
+      this.itemList = [
+        {
+          type: "student",
+          items: [
+            {
+              name: "张三",
+              age: 20
+            },
+            {
+              name: "李四",
+              age: 21
+            }
+          ]
+        },
+        {
+          type: "teacher",
+          items: [
+            {
+              name: "王老师",
+              age: 40
+            },
+            {
+              name: "李老师",
+              age: 41
+            }
+          ]
+        }
+      ];
   }
 
   ngOnInit(): void {
   }
   ngAfterViewChecked() {
-      //this.appSearch.run();
+    //this.appSearch.run();
   }
   clickHandler() {
     alert("点击事件");
   }
-  getDataHandler(){
+  getDataHandler() {
     alert(this.title);
   }
-  setDataHandler(){
+  setDataHandler() {
     this.title = "已修改";
   }
   keyDownHandler(e) {
-   console.log(e.keyCode, e.target.value);
+    console.log(e.keyCode, e.target.value);
   }
   changeValueHandler() {
     this.inputValue = "你好你好";
   }
-   getValueHandler() {
-     console.log(this.inputValue);
-   }
-   getChildComponentRun() {
+  getValueHandler() {
+    console.log(this.inputValue);
+  }
+  getChildComponentRun() {
     this.appSearch.run();
-   }
-   run(data: any) {
-     console.log("子组件给父组件的数据：" + data);
-     console.log("我是父组件main的方法");
+  }
+  run(data: any) {
+    console.log("子组件给父组件的数据：" + data);
+    console.log("我是父组件main的方法");
 
-   }
+  }
 }
